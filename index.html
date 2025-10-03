@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D3-003 Mates G4S Secure Solutions</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333; }
+header { background:#004080; color:white; text-align:center; padding:20px 10px; }
+header h1 { margin:0; font-size:2rem; }
+header p { margin:5px 0 0; font-size:1rem; }
+
+section { max-width:900px; margin:20px auto; padding:15px; background:white; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+
+table { width:100%; border-collapse: collapse; }
+th, td { padding:10px; text-align:left; border-bottom:1px solid #ddd; font-size:0.95rem; }
+th { background:#004080; color:white; }
+td a { color:#25D366; text-decoration:none; font-weight:bold; }
+td a:hover { text-decoration:underline; }
+
+#rules h2 { color:#004080; text-align:center; margin-bottom:10px; cursor:pointer; user-select:none; }
+#rules ul { list-style-type:disc; padding-left:20px; display:none; font-size:0.95rem; }
+#rules ul.show { display:block; }
+
+#contact a { display:inline-flex; align-items:center; justify-content:center; background:#25D366; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1rem; margin-top:10px; }
+#contact a img { width:24px; height:24px; margin-right:10px; }
+
+iframe { width:100%; height:450px; border:0; border-radius:10px; }
+
+footer { text-align:center; padding:15px; background:#004080; color:white; margin-top:30px; font-size:0.9rem; }
+
+button.emergency-btn { display:block; width:90%; max-width:400px; margin:20px auto; padding:15px; font-size:1rem; font-weight:bold; color:white; background:#FF0000; border:none; border-radius:8px; cursor:pointer; }
+button.emergency-btn:hover { background:#cc0000; }
+
+@media(max-width:600px){
+  header h1{font-size:1.5rem;}
+  th, td{font-size:0.85rem;}
+  #contact a{font-size:0.9rem; padding:10px 15px;}
+  #contact a img{width:20px;height:20px;margin-right:8px;}
+  button.emergency-btn { font-size:0.9rem; padding:12px; }
+}
+
+/* Prayer Times Style */
+.prayertime { background:#004080; color:white; text-align:center; padding:15px; font-size:0.95rem; }
+.prayertime h2 { margin:0; font-size:1.2rem; }
+.prayertime p { margin:5px 0 0; }
+</style>
+</head>
+<body>
+
+
+
+<header>
+<h1>D3-003 Mates G4S Secure Solutions</h1>
+<p>Company Friends Group</p>
+</header>
+<!-- Prayer Times Section -->
+<section class="prayertime">
+  <h2>Abu Dhabi, Al Mafraq City 2 - Prayer Times</h2>
+  <p>Fajr: 04:45 | Dhuhr: 12:15 | Asr: 15:45 | Maghrib: 18:25 | Isha: 19:45</p>
+</section>
+
+<!-- Emergency Button -->
+<button class="emergency-btn" onclick="sendEmergency()">🚨 Emergency Assistance</button>
+
+<!-- Members Table -->
+<section>
+<h2 style="text-align:center; color:#004080;">Members List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Place of Birth</th>
+      <th>Service / Track Record</th>
+      <th>Mobile / WhatsApp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coach Sajid Hussain Warraich</td>
+      <td><a href="https://www.google.com/maps?q=Sheikhupura,+Punjab,+Pakistan" target="_blank">Sheikhupura, Punjab, Pakistan</a></td>
+      <td>Ex-Army, EME Clerk, G4S CIT, since 2008, Currently working in NYU Abu Dhabi</td>
+      <td><a href="https://wa.me/971543148645" target="_blank">+971 54 314 8645</a></td>
+    </tr>
+    <tr>
+      <td>Lal Marjan</td>
+      <td><a href="https://www.google.com/maps?q=Peshawar,+KPK,+Pakistan" target="_blank">Peshawar, KPK, Pakistan</a></td>
+      <td>G4S since 2008, Mostly Banking Sector, Currently Bank Of Sharjah Abu Dhabi Mall</td>
+      <td><a href="https://wa.me/971561580925" target="_blank">+971 56 158 0925</a></td>
+    </tr>
+    <tr>
+      <td>Ibrar Ahmed</td>
+      <td><a href="https://www.google.com/maps?q=Kohat,+KPK,+Pakistan" target="_blank">Kohat, KPK, Pakistan</a></td>
+      <td>G4S since 2008, Vehicle Patrolling & Security Supervisor, Yas Marina Circuit</td>
+      <td><a href="https://wa.me/971503279825" target="_blank">+971 50 327 9825</a></td>
+    </tr>
+    <tr>
+      <td>Abdul Saboor</td>
+      <td><a href="https://www.google.com/maps?q=Abbottabad,+KPK,+Pakistan" target="_blank">Abbottabad, KPK, Pakistan</a></td>
+      <td>G4S since 2014, Ferrari World Accommodation, Currently Mussafah ICAD</td>
+      <td><a href="https://wa.me/971525836975" target="_blank">+971 52 583 6975</a></td>
+    </tr>
+    <tr>
+      <td>Kamran Azad</td>
+      <td><a href="https://www.google.com/maps?q=Rawlakot,+Azad+Kashmir,+Pakistan" target="_blank">Rawlakot, Azad Kashmir, Pakistan</a></td>
+      <td>G4S since 2011, Worked Dubai & Ferrari World, Currently working in Morocco Embassy Abu Dhabi</td>
+      <td><a href="https://wa.me/971557531966" target="_blank">+971 55 753 1966</a></td>
+    </tr>
+    <tr>
+      <td>Amin Ullah</td>
+      <td><a href="https://www.google.com/maps?q=Peshawar,+KPK,+Pakistan" target="_blank">Peshawar, KPK, Pakistan</a></td>
+      <td>G4S since 2011, Various locations, Currently Working in NYU Abu Dhabi</td>
+      <td><a href="https://wa.me/971551783165" target="_blank">+971 55 178 3165</a></td>
+    </tr>
+    <tr>
+      <td>Muhammad Afzal</td>
+      <td><a href="https://www.google.com/maps?q=Gujrat,+Punjab,+Pakistan" target="_blank">Gujrat, Punjab, Pakistan</a></td>
+      <td>G4S since 2014, Adec School Project, Magenta, Labotel, Accommodation & Events, Currently FCC Operator Etihad Arena</td>
+      <td><a href="https://wa.me/971551052412" target="_blank">+971 55 105 2412</a></td>
+    </tr>
+    <tr>
+      <td>Haseeb Riaz</td>
+      <td><a href="https://www.google.com/maps?q=Taxila,+Punjab,+Pakistan" target="_blank">Taxila, Punjab, Pakistan</a></td>
+      <td>G4S since 2021, Admin at different locations, Currently Camp Coordinator Magenta Camp Office</td>
+      <td><a href="https://wa.me/971522543050" target="_blank">+971 52 254 3050</a></td>
+    </tr>
+    <tr>
+      <td>Muhammad Akhter</td>
+      <td><a href="https://www.google.com/maps?q=Azad+Kashmir,+Pakistan" target="_blank">Azad Kashmir, Pakistan</a></td>
+      <td>G4S since 2022, Currently working in Al Bahar Tower Abu Dhabi</td>
+      <td><a href="https://wa.me/971557365581" target="_blank">+971 55 736 5581</a></td>
+    </tr>
+    <tr>
+      <td>Muhammad Zeeshan</td>
+      <td><a href="https://www.google.com/maps?q=Kohat,+KPK,+Pakistan" target="_blank">Kohat, KPK, Pakistan</a></td>
+      <td>G4S since 2022, Currently working in Special Events, Abu Dhabi</td>
+      <td><a href="https://wa.me/971529616958" target="_blank">+971 52 961 6958</a></td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<!-- Group Rules -->
+<section id="rules">
+<h2 onclick="toggleRules()">Group Rules / گروپ کے قوانین (Click to Expand/Collapse)</h2>
+<ul id="rulesList">
+  <li>Respect all members and their opinions. / تمام اراکین اور ان کی رائے کا احترام کریں۔</li>
+  <li>No spam or irrelevant messages. / اسپیم یا غیر متعلقہ پیغامات نہیں۔</li>
+  <li>Share useful information only. / صرف مفید معلومات شیئر کریں۔</li>
+  <li>Maintain privacy of members' personal details. / اراکین کی ذاتی معلومات کی حفاظت کریں۔</li>
+  <li>Follow the admin instructions. / ایڈمن کی ہدایات پر عمل کریں۔</li>
+</ul>
+</section>
+
+<!-- G4S Official Contacts -->
+<section>
+<h2 style="text-align:center; color:#004080;">G4S Secure Solutions - Abu Dhabi Contacts</h2>
+<table>
+<thead>
+<tr>
+<th>Name / Designation</th>
+<th>Mobile / WhatsApp</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G4S AUH Control Room 24/7</td>
+<td><a href="https://wa.me/971557108298" target="_blank">+971 55 710 8298</a>, +971 400 2293, +971 54 5841661</td>
+<td>controlroommss2@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Patrolling Supervisor - Mr. Riaqat Ali</td>
+<td><a href="https://wa.me/971526044191" target="_blank">+971 52 604 4191</a></td>
+<td>riyaqath.ali@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Patrolling Supervisor - Mr. Muhammad Yousaf</td>
+<td><a href="https://wa.me/971526044190" target="_blank">+971 52 604 4190</a></td>
+<td>muhammad.yousaf@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Patrolling Supervisor - Mr. Vijo Joy</td>
+<td><a href="https://wa.me/971526044195" target="_blank">+971 52 604 4195</a></td>
+<td>vijo.joy@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Patrolling Supervisor - Mr. Mohammed Baza</td>
+<td><a href="https://wa.me/971526044052" target="_blank">+971 52 604 4052</a></td>
+<td>mohammed.baza@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Patrolling Supervisor - Mr. Muhammed Nasir</td>
+<td><a href="https://wa.me/971509408546" target="_blank">+971 50 940 8546</a></td>
+<td>mohammad.nasser@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Patrolling Supervisor - Mr. Khalid Khalaf</td>
+<td><a href="https://wa.me/971554478609" target="_blank">+971 55 447 8609</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Operations Manager - Mr. Shibusha Abushaiman</td>
+<td><a href="https://wa.me/971564160367" target="_blank">+971 56 416 0367</a></td>
+<td>Shibusha.abushaiman@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Operations Coordintor - Mr. Krishna Kamal</td>
+<td><a href="https://wa.me/971526044197" target="_blank">+971 52 604 4197</a></td>
+<td>krishna.mintu@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Camp Coordinator Day Shift - Mr. Dileep Kumar</td>
+<td><a href="https://wa.me/971554002293" target="_blank">+971 55 400 2293</a></td>
+<td>icad2@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Camp Coordinator Day Shift - Mr. Ranjith Muthirakalayil</td>
+<td><a href="https://wa.me/971545841661" target="_blank">+971 54 584 1661</a></td>
+<td>opskha@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Camp Coordinator Night - Mr. Haseeb Riaz</td>
+<td><a href="https://wa.me/971554002293" target="_blank">+971 55 400 2293</a></td>
+<td>opskha@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Ladies Accommodation - Ms. Rebecca Escobia</td>
+<td><a href="https://wa.me/971565022889" target="_blank">+971 56 502 2889</a></td>
+<td>rebecca.escobia@uae.g4s.com</td>
+</tr>
+<tr>
+<td>Camp Coordinator - Al Ain - Mr. Danish Ali</td>
+<td><a href="https://wa.me/971545841639" target="_blank">+971 54 584 1639</a></td>
+<td>opsain@uae.g4s.com</td>
+</tr>
+<tr>
+<td>HR & Welfare Team</td>
+<td>Multiple</td>
+<td>hrsharedservices@uae.g4s.com</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- G4S D3 Block Accommodation Map -->
+<section>
+<h2>G4S Company Accommodation - D3 Block</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.100412547852!2d54.63060763402124!3d24.258573807828473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e31cb1a435cf9%3A0xe084da4289ee0778!2sG4S%20Security%20Solutions%20Accommodation%20-%20D3%20Block!5e0!3m2!1sen!2sae!4v1759475279123!5m2!1sen!2sae" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<footer>
+&copy; 2025 D3-003 Mates & G4S Secure Solutions. All Rights Reserved.
+</footer>
+
+<script>
+function toggleRules() {
+  const list = document.getElementById('rulesList');
+  list.classList.toggle('show');
+}
+
+function sendEmergency() {
+  alert("Emergency notification sent to all members via WhatsApp!");
+}
+</script>
+
+</body>
+</html>
