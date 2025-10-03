@@ -1,4 +1,4 @@
-</tr><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,8 +13,11 @@ section { max-width:900px; margin:20px auto; padding:15px; background:white; bor
 table { width:100%; border-collapse: collapse; margin-top:15px; }
 th, td { padding:10px; text-align:left; border-bottom:1px solid #ddd; font-size:0.95rem; }
 th { background:#004080; color:white; }
+td.current { background:#d1e7ff; font-weight:bold; }
+td#countdown { text-align:center; font-weight:bold; color:#004080; }
 td a { color:#004080; text-decoration:none; font-weight:bold; }
 td a:hover { text-decoration:underline; }
+iframe { width:100%; height:450px; border:0; border-radius:10px; margin-top:20px; }
 footer { text-align:center; padding:15px; background:#004080; color:white; margin-top:30px; font-size:0.9rem; }
 @media(max-width:600px){
   header h1{font-size:1.5rem;}
@@ -27,8 +30,10 @@ footer { text-align:center; padding:15px; background:#004080; color:white; margi
 <header>
 <h1>D3-003 Mates</h1>
 <p>G4S Secure Solutions - Friends Group</p>
+<p id="datetime"></p>
 </header>
 
+<!-- Members Table -->
 <section>
 <h2 style="text-align:center; color:#004080;">Members List</h2>
 <table>
@@ -84,44 +89,19 @@ footer { text-align:center; padding:15px; background:#004080; color:white; margi
   <td>Muhammad Akhter</td>
   <td><a href="https://www.google.com/maps/search/Azad+Kashmir,+Pakistan" target="_blank">Azad Kashmir, Pakistan</a></td>
   <td>G4S since 2022, Currently at Al Bahar Tower, Abu Dhabi</td>
+</tr>
 <tr>
   <td>Muhammad Zeeshan</td>
   <td><a href="https://www.google.com/maps/search/Kohat,+KPK,+Pakistan" target="_blank">Kohat, KPK, Pakistan</a></td>
   <td>G4S since 2022, Currently in Abu Dhabi</td>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abu Dhabi Prayer Times - Al Mafraq Worker City 2</title>
-<style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333; }
-header { background:#004080; color:white; text-align:center; padding:20px 10px; }
-header h1 { margin:0; font-size:2rem; }
-header p { margin:5px 0 0; font-size:1rem; }
-section { max-width:900px; margin:20px auto; padding:15px; background:white; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
-table { width:100%; border-collapse: collapse; margin-top:15px; }
-th, td { padding:10px; text-align:left; border-bottom:1px solid #ddd; font-size:0.95rem; }
-th { background:#004080; color:white; }
-td.current { background:#d1e7ff; font-weight:bold; }
-td#countdown { text-align:center; font-weight:bold; color:#004080; }
-footer { text-align:center; padding:15px; background:#004080; color:white; margin-top:30px; font-size:0.9rem; }
-@media(max-width:600px){
-  header h1{font-size:1.5rem;}
-  th, td{font-size:0.85rem;}
-}
-</style>
-</head>
-<body>
+</tr>
+</tbody>
+</table>
+</section>
 
-<header>
-<h1>Abu Dhabi Prayer Times</h1>
-<p>Al Mafraq Worker City 2</p>
-<p id="datetime"></p>
-</header>
-
+<!-- Prayer Times Section -->
 <section>
-<h2 style="text-align:center; color:#004080;">Prayer Times</h2>
+<h2 style="text-align:center; color:#004080;">Abu Dhabi Prayer Times - Al Mafraq Worker City 2</h2>
 <table id="prayerTimes">
   <thead>
     <tr>
@@ -139,26 +119,25 @@ footer { text-align:center; padding:15px; background:#004080; color:white; margi
   </tbody>
 </table>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.100412547852!2d54.63060763402124!3d24.258573807828473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e31cb1a435cf9%3A0xe084da4289ee0778!2sG4S%20Security%20Solutions%20Accommodation%20-%20D3%20Block!5e0!3m2!1sen!2sae!4v1759475279123!5m2!1sen!2sae" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:450px;border:0;border-radius:10px;"></iframe>
-
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.100412547852!2d54.63060763402124!3d24.258573807828473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e31cb1a435cf9%3A0xe084da4289ee0778!2sG4S%20Security%20Solutions%20Accommodation%20-%20D3%20Block!5e0!3m2!1sen!2sae!4v1759475279123!5m2!1sen!2sae" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
-
-<footer>
-&copy; 2025 Abu Dhabi Prayer Times. All Rights Reserved.
-</footer>
 
 <audio id="azanAudio">
   <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
 </audio>
+
+<footer>
+&copy; 2025 D3-003 Mates. All Rights Reserved. <br>
+Developed and maintained by D3-003 G4S Secure Solution Mates Group.
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
 <script>
 const prayerIds = ['fajr','dhuhr','asr','maghrib','isha'];
-const timezone = 'Asia/Dubai'; // Abu Dhabi timezone
+const timezone = 'Asia/Dubai';
 const audio = document.getElementById('azanAudio');
-
 let prayerTimesObj = {};
 
 async function updatePrayerTimes(){
@@ -183,15 +162,11 @@ function checkAzanAndHighlight(){
   const now = moment().tz(timezone);
   let nextPrayer = null;
   let nextPrayerName = '';
-  
-  // Reset highlight
   prayerIds.forEach(id => document.getElementById(id).classList.remove('current'));
-  
-  // Find current or next prayer
   for(let i=0;i<prayerIds.length;i++){
     const id = prayerIds[i];
     const time = prayerTimesObj[id];
-    if(now.isSame(time, 'minute')){
+    if(now.isSame(time,'minute')){
       audio.play();
       alert(`Time for ${id.charAt(0).toUpperCase()+id.slice(1)} prayer!`);
     }
@@ -202,21 +177,15 @@ function checkAzanAndHighlight(){
       break;
     }
   }
-
-  if(!nextPrayer){ // if after Isha, next prayer is Fajr of next day
+  if(!nextPrayer){
     const tomorrow = moment().tz(timezone).add(1,'day').format('YYYY-MM-DD');
     nextPrayer = moment.tz(`${tomorrow} ${document.getElementById('fajr').textContent}`, 'YYYY-MM-DD HH:mm', timezone);
     nextPrayerName = 'Fajr';
     document.getElementById('fajr').classList.add('current');
   }
-
-  // Countdown
   const diff = nextPrayer.diff(now);
   const dur = moment.duration(diff);
-  const hours = Math.floor(dur.asHours());
-  const minutes = dur.minutes();
-  const seconds = dur.seconds();
-  document.getElementById('countdown').textContent = `${hours}h ${minutes}m ${seconds}s until ${nextPrayerName}`;
+  document.getElementById('countdown').textContent = `${Math.floor(dur.asHours())}h ${dur.minutes()}m ${dur.seconds()}s until ${nextPrayerName}`;
 }
 
 setInterval(updateDateTime,1000);
@@ -226,7 +195,3 @@ updatePrayerTimes();
 
 </body>
 </html>
-<footer>
-  &copy; 2025 D3-003 Mates. All Rights Reserved. <br>
-  Developed and maintained by D3-003 G4S Secure Solution Mates Group.
-</footer>
